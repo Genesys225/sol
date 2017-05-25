@@ -1,0 +1,998 @@
+[33mwarn[39m:    --minUptime not set. Defaulting to: 1000ms
+[33mwarn[39m:    --spinSleepTime not set. Your script will exit if it does not stay up for at least 1000ms
+mqttManager {}
+actionsManager {}
+ACTION RUNNING: [ { _id: 5914175db3807a24808527fe,
+    name: 'coAction',
+    lastrun: 1495718605.81,
+    status: 'active',
+    runtime: 'every 1min' },
+  { _id: 591c08915314ef111f87e55a,
+    name: 'tempAction',
+    lastrun: 1495718605.647,
+    status: 'tempAction',
+    runtime: 'every 1min' },
+  { _id: 5922d0d85314ef111f8be7be,
+    name: 'huAction',
+    lastrun: 1495709870.149,
+    status: 'tempAction',
+    runtime: '13:57 oclock' },
+  { _id: 5922d0ee5314ef111f8be7bf,
+    name: 'lightAction',
+    lastrun: 1495718345.449,
+    status: 'tempAction',
+    runtime: 'every 5min' },
+  { _id: 5923fab85314ef111f8be7c3,
+    name: 'mqttDemo',
+    lastrun: 1495717660.576,
+    status: 'active',
+    runtime: 'every 20min',
+    params: { timeToRun: '5 min' } },
+  { _id: 5926bbd9092ef82d48e9fc35,
+    name: 'ventTimeAction',
+    lastrun: 1495717945.011,
+    status: 'active',
+    runtime: 'every 60min',
+    params: { timeToRun: '300000' } },
+  { _id: 5926bbd9092ef82d48e9fc36,
+    name: 'vent2TimeAction',
+    lastrun: 1495717944.85,
+    status: 'active',
+    runtime: 'every 60min',
+    params: { timeToRun: '300000' } },
+  { _id: 5926bbe7092ef82d48e9fc37,
+    name: 'mqttDemo',
+    lastrun: 9495708029.782,
+    status: 'active',
+    runtime: '14:20 oclock',
+    params: { timeToRun: '30000' } } ]
+ACTION RUNNING: [ { _id: 5914175db3807a24808527fe,
+    name: 'coAction',
+    lastrun: 1495718605.81,
+    status: 'active',
+    runtime: 'every 1min' },
+  { _id: 591c08915314ef111f87e55a,
+    name: 'tempAction',
+    lastrun: 1495718605.647,
+    status: 'tempAction',
+    runtime: 'every 1min' },
+  { _id: 5922d0d85314ef111f8be7be,
+    name: 'huAction',
+    lastrun: 1495709870.149,
+    status: 'tempAction',
+    runtime: '13:57 oclock' },
+  { _id: 5922d0ee5314ef111f8be7bf,
+    name: 'lightAction',
+    lastrun: 1495718345.449,
+    status: 'tempAction',
+    runtime: 'every 5min' },
+  { _id: 5923fab85314ef111f8be7c3,
+    name: 'mqttDemo',
+    lastrun: 1495717660.576,
+    status: 'active',
+    runtime: 'every 20min',
+    params: { timeToRun: '5 min' } },
+  { _id: 5926bbd9092ef82d48e9fc35,
+    name: 'ventTimeAction',
+    lastrun: 1495717945.011,
+    status: 'active',
+    runtime: 'every 60min',
+    params: { timeToRun: '300000' } },
+  { _id: 5926bbd9092ef82d48e9fc36,
+    name: 'vent2TimeAction',
+    lastrun: 1495717944.85,
+    status: 'active',
+    runtime: 'every 60min',
+    params: { timeToRun: '300000' } },
+  { _id: 5926bbe7092ef82d48e9fc37,
+    name: 'mqttDemo',
+    lastrun: 9495708029.782,
+    status: 'active',
+    runtime: '14:20 oclock',
+    params: { timeToRun: '30000' } } ]
+ACTION RUNNING: coAction
+false
+check if run RUNNUNG  0.9274 1
+check if run RUNNUNG  false
+ACTION RUNNING: tempAction
+false
+check if run RUNNUNG  0.9302499999999999 1
+check if run RUNNUNG  false
+ACTION RUNNING: huAction
+false 24 57
+ACTION RUNNING: lightAction
+true
+check if run RUNNUNG  5.267166666666666 5
+check if run RUNNUNG  true
+ACTION RUNNING: mqttDemo
+false
+check if run RUNNUNG  16.681733333333334 20
+check if run RUNNUNG  false
+ACTION RUNNING: ventTimeAction
+false
+check if run RUNNUNG  11.941166666666668 60
+check if run RUNNUNG  false
+ACTION RUNNING: vent2TimeAction
+false
+check if run RUNNUNG  11.943866666666667 60
+check if run RUNNUNG  false
+ACTION RUNNING: mqttDemo
+false 24 20
+ACTION RUNNING: coAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: tempAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: huAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: lightAction
+UPDATING LAST RUNNNNNNNNNN undefined true undefined
+UPDATING LAST RUNNNNNNNNNN
+RESULTSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+ACTION RUNNING: mqttDemo
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: ventTimeAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: vent2TimeAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: mqttDemo
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RESPONCE: { light: ' 816' }
+WWWWWWWWWWWWWWWWWWWWWWWWW { light: ' 816' }
+{ _id: 5922d0ee5314ef111f8be7bf,
+  name: 'lightAction',
+  lastrun: 1495718345.449,
+  status: 'tempAction',
+  runtime: 'every 5min' } 'ACTIONNNNNNNNN'
+{ _id: 5922d0ee5314ef111f8be7bf,
+  name: 'lightAction',
+  lastrun: 1495718662.927,
+  status: 'tempAction',
+  runtime: 'every 5min' } 5922d0ee5314ef111f8be7bf 1.1111111111111112e+31
+ACTION RUNNING: [ { _id: 5914175db3807a24808527fe,
+    name: 'coAction',
+    lastrun: 1495718605.81,
+    status: 'active',
+    runtime: 'every 1min' },
+  { _id: 591c08915314ef111f87e55a,
+    name: 'tempAction',
+    lastrun: 1495718605.647,
+    status: 'tempAction',
+    runtime: 'every 1min' },
+  { _id: 5922d0d85314ef111f8be7be,
+    name: 'huAction',
+    lastrun: 1495709870.149,
+    status: 'tempAction',
+    runtime: '13:57 oclock' },
+  { _id: 5922d0ee5314ef111f8be7bf,
+    name: 'lightAction',
+    lastrun: 1495718662.927,
+    status: 'tempAction',
+    runtime: 'every 5min' },
+  { _id: 5923fab85314ef111f8be7c3,
+    name: 'mqttDemo',
+    lastrun: 1495717660.576,
+    status: 'active',
+    runtime: 'every 20min',
+    params: { timeToRun: '5 min' } },
+  { _id: 5926bbd9092ef82d48e9fc35,
+    name: 'ventTimeAction',
+    lastrun: 1495717945.011,
+    status: 'active',
+    runtime: 'every 60min',
+    params: { timeToRun: '300000' } },
+  { _id: 5926bbd9092ef82d48e9fc36,
+    name: 'vent2TimeAction',
+    lastrun: 1495717944.85,
+    status: 'active',
+    runtime: 'every 60min',
+    params: { timeToRun: '300000' } },
+  { _id: 5926bbe7092ef82d48e9fc37,
+    name: 'mqttDemo',
+    lastrun: 9495708029.782,
+    status: 'active',
+    runtime: '14:20 oclock',
+    params: { timeToRun: '30000' } } ]
+ACTION RUNNING: [ { _id: 5914175db3807a24808527fe,
+    name: 'coAction',
+    lastrun: 1495718605.81,
+    status: 'active',
+    runtime: 'every 1min' },
+  { _id: 591c08915314ef111f87e55a,
+    name: 'tempAction',
+    lastrun: 1495718605.647,
+    status: 'tempAction',
+    runtime: 'every 1min' },
+  { _id: 5922d0d85314ef111f8be7be,
+    name: 'huAction',
+    lastrun: 1495709870.149,
+    status: 'tempAction',
+    runtime: '13:57 oclock' },
+  { _id: 5922d0ee5314ef111f8be7bf,
+    name: 'lightAction',
+    lastrun: 1495718662.927,
+    status: 'tempAction',
+    runtime: 'every 5min' },
+  { _id: 5923fab85314ef111f8be7c3,
+    name: 'mqttDemo',
+    lastrun: 1495717660.576,
+    status: 'active',
+    runtime: 'every 20min',
+    params: { timeToRun: '5 min' } },
+  { _id: 5926bbd9092ef82d48e9fc35,
+    name: 'ventTimeAction',
+    lastrun: 1495717945.011,
+    status: 'active',
+    runtime: 'every 60min',
+    params: { timeToRun: '300000' } },
+  { _id: 5926bbd9092ef82d48e9fc36,
+    name: 'vent2TimeAction',
+    lastrun: 1495717944.85,
+    status: 'active',
+    runtime: 'every 60min',
+    params: { timeToRun: '300000' } },
+  { _id: 5926bbe7092ef82d48e9fc37,
+    name: 'mqttDemo',
+    lastrun: 9495708029.782,
+    status: 'active',
+    runtime: '14:20 oclock',
+    params: { timeToRun: '30000' } } ]
+ACTION RUNNING: coAction
+true
+check if run RUNNUNG  1.2520666666666667 1
+check if run RUNNUNG  true
+ACTION RUNNING: tempAction
+true
+check if run RUNNUNG  1.2548333333333335 1
+check if run RUNNUNG  true
+ACTION RUNNING: huAction
+false 24 57
+ACTION RUNNING: lightAction
+false
+check if run RUNNUNG  0.3002 5
+check if run RUNNUNG  false
+ACTION RUNNING: mqttDemo
+false
+check if run RUNNUNG  17.006116666666667 20
+check if run RUNNUNG  false
+ACTION RUNNING: ventTimeAction
+false
+check if run RUNNUNG  12.26555 60
+check if run RUNNUNG  false
+ACTION RUNNING: vent2TimeAction
+false
+check if run RUNNUNG  12.268266666666667 60
+check if run RUNNUNG  false
+ACTION RUNNING: mqttDemo
+false 24 20
+ACTION RUNNING: coAction
+UPDATING LAST RUNNNNNNNNNN undefined true undefined
+UPDATING LAST RUNNNNNNNNNN
+RESULTSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+ACTION RUNNING: tempAction
+UPDATING LAST RUNNNNNNNNNN undefined true undefined
+UPDATING LAST RUNNNNNNNNNN
+TEMPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPnvb vb
+ACTION RUNNING: huAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: lightAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: mqttDemo
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: ventTimeAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: vent2TimeAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: mqttDemo
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RESPONCE: { co: undefined }
+WWWWWWWWWWWWWWWWWWWWWWWWW { co: undefined }
+ACTION RESPONCE: { temp: '25.45' }
+WWWWWWWWWWWWWWWWWWWWWWWWW { temp: '25.45' }
+{ _id: 5914175db3807a24808527fe,
+  name: 'coAction',
+  lastrun: 1495718605.81,
+  status: 'active',
+  runtime: 'every 1min' } 'ACTIONNNNNNNNN'
+{ _id: 5914175db3807a24808527fe,
+  name: 'coAction',
+  lastrun: 1495718683.058,
+  status: 'active',
+  runtime: 'every 1min' } 5914175db3807a24808527fe 1.1111111111111112e+31
+{ _id: 591c08915314ef111f87e55a,
+  name: 'tempAction',
+  lastrun: 1495718605.647,
+  status: 'tempAction',
+  runtime: 'every 1min' } 'ACTIONNNNNNNNN'
+{ _id: 591c08915314ef111f87e55a,
+  name: 'tempAction',
+  lastrun: 1495718683.062,
+  status: 'tempAction',
+  runtime: 'every 1min' } 591c08915314ef111f87e55a 1.1111111111111112e+31
+ACTION RUNNING: [ { _id: 5914175db3807a24808527fe,
+    name: 'coAction',
+    lastrun: 1495718683.058,
+    status: 'active',
+    runtime: 'every 1min' },
+  { _id: 591c08915314ef111f87e55a,
+    name: 'tempAction',
+    lastrun: 1495718683.062,
+    status: 'tempAction',
+    runtime: 'every 1min' },
+  { _id: 5922d0d85314ef111f8be7be,
+    name: 'huAction',
+    lastrun: 1495709870.149,
+    status: 'tempAction',
+    runtime: '13:57 oclock' },
+  { _id: 5922d0ee5314ef111f8be7bf,
+    name: 'lightAction',
+    lastrun: 1495718662.927,
+    status: 'tempAction',
+    runtime: 'every 5min' },
+  { _id: 5923fab85314ef111f8be7c3,
+    name: 'mqttDemo',
+    lastrun: 1495717660.576,
+    status: 'active',
+    runtime: 'every 20min',
+    params: { timeToRun: '5 min' } },
+  { _id: 5926bbd9092ef82d48e9fc35,
+    name: 'ventTimeAction',
+    lastrun: 1495717945.011,
+    status: 'active',
+    runtime: 'every 60min',
+    params: { timeToRun: '300000' } },
+  { _id: 5926bbd9092ef82d48e9fc36,
+    name: 'vent2TimeAction',
+    lastrun: 1495717944.85,
+    status: 'active',
+    runtime: 'every 60min',
+    params: { timeToRun: '300000' } },
+  { _id: 5926bbe7092ef82d48e9fc37,
+    name: 'mqttDemo',
+    lastrun: 9495708029.782,
+    status: 'active',
+    runtime: '14:20 oclock',
+    params: { timeToRun: '30000' } } ]
+ACTION RUNNING: [ { _id: 5914175db3807a24808527fe,
+    name: 'coAction',
+    lastrun: 1495718683.058,
+    status: 'active',
+    runtime: 'every 1min' },
+  { _id: 591c08915314ef111f87e55a,
+    name: 'tempAction',
+    lastrun: 1495718683.062,
+    status: 'tempAction',
+    runtime: 'every 1min' },
+  { _id: 5922d0d85314ef111f8be7be,
+    name: 'huAction',
+    lastrun: 1495709870.149,
+    status: 'tempAction',
+    runtime: '13:57 oclock' },
+  { _id: 5922d0ee5314ef111f8be7bf,
+    name: 'lightAction',
+    lastrun: 1495718662.927,
+    status: 'tempAction',
+    runtime: 'every 5min' },
+  { _id: 5923fab85314ef111f8be7c3,
+    name: 'mqttDemo',
+    lastrun: 1495717660.576,
+    status: 'active',
+    runtime: 'every 20min',
+    params: { timeToRun: '5 min' } },
+  { _id: 5926bbd9092ef82d48e9fc35,
+    name: 'ventTimeAction',
+    lastrun: 1495717945.011,
+    status: 'active',
+    runtime: 'every 60min',
+    params: { timeToRun: '300000' } },
+  { _id: 5926bbd9092ef82d48e9fc36,
+    name: 'vent2TimeAction',
+    lastrun: 1495717944.85,
+    status: 'active',
+    runtime: 'every 60min',
+    params: { timeToRun: '300000' } },
+  { _id: 5926bbe7092ef82d48e9fc37,
+    name: 'mqttDemo',
+    lastrun: 9495708029.782,
+    status: 'active',
+    runtime: '14:20 oclock',
+    params: { timeToRun: '30000' } } ]
+ACTION RUNNING: coAction
+false
+check if run RUNNUNG  0.29778333333333334 1
+check if run RUNNUNG  false
+ACTION RUNNING: tempAction
+false
+check if run RUNNUNG  0.29773333333333335 1
+check if run RUNNUNG  false
+ACTION RUNNING: huAction
+false 25 57
+ACTION RUNNING: lightAction
+false
+check if run RUNNUNG  0.6333833333333333 5
+check if run RUNNUNG  false
+ACTION RUNNING: mqttDemo
+false
+check if run RUNNUNG  17.339316666666665 20
+check if run RUNNUNG  false
+ACTION RUNNING: ventTimeAction
+false
+check if run RUNNUNG  12.599 60
+check if run RUNNUNG  false
+ACTION RUNNING: vent2TimeAction
+false
+check if run RUNNUNG  12.601750000000001 60
+check if run RUNNUNG  false
+ACTION RUNNING: mqttDemo
+false 25 20
+ACTION RUNNING: coAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: tempAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: huAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: lightAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: mqttDemo
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: ventTimeAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: vent2TimeAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: mqttDemo
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: [ { _id: 5914175db3807a24808527fe,
+    name: 'coAction',
+    lastrun: 1495718683.058,
+    status: 'active',
+    runtime: 'every 1min' },
+  { _id: 591c08915314ef111f87e55a,
+    name: 'tempAction',
+    lastrun: 1495718683.062,
+    status: 'tempAction',
+    runtime: 'every 1min' },
+  { _id: 5922d0d85314ef111f8be7be,
+    name: 'huAction',
+    lastrun: 1495709870.149,
+    status: 'tempAction',
+    runtime: '13:57 oclock' },
+  { _id: 5922d0ee5314ef111f8be7bf,
+    name: 'lightAction',
+    lastrun: 1495718662.927,
+    status: 'tempAction',
+    runtime: 'every 5min' },
+  { _id: 5923fab85314ef111f8be7c3,
+    name: 'mqttDemo',
+    lastrun: 1495717660.576,
+    status: 'active',
+    runtime: 'every 20min',
+    params: { timeToRun: '5 min' } },
+  { _id: 5926bbd9092ef82d48e9fc35,
+    name: 'ventTimeAction',
+    lastrun: 1495717945.011,
+    status: 'active',
+    runtime: 'every 60min',
+    params: { timeToRun: '300000' } },
+  { _id: 5926bbd9092ef82d48e9fc36,
+    name: 'vent2TimeAction',
+    lastrun: 1495717944.85,
+    status: 'active',
+    runtime: 'every 60min',
+    params: { timeToRun: '300000' } },
+  { _id: 5926bbe7092ef82d48e9fc37,
+    name: 'mqttDemo',
+    lastrun: 9495708029.782,
+    status: 'active',
+    runtime: '14:20 oclock',
+    params: { timeToRun: '30000' } } ]
+ACTION RUNNING: [ { _id: 5914175db3807a24808527fe,
+    name: 'coAction',
+    lastrun: 1495718683.058,
+    status: 'active',
+    runtime: 'every 1min' },
+  { _id: 591c08915314ef111f87e55a,
+    name: 'tempAction',
+    lastrun: 1495718683.062,
+    status: 'tempAction',
+    runtime: 'every 1min' },
+  { _id: 5922d0d85314ef111f8be7be,
+    name: 'huAction',
+    lastrun: 1495709870.149,
+    status: 'tempAction',
+    runtime: '13:57 oclock' },
+  { _id: 5922d0ee5314ef111f8be7bf,
+    name: 'lightAction',
+    lastrun: 1495718662.927,
+    status: 'tempAction',
+    runtime: 'every 5min' },
+  { _id: 5923fab85314ef111f8be7c3,
+    name: 'mqttDemo',
+    lastrun: 1495717660.576,
+    status: 'active',
+    runtime: 'every 20min',
+    params: { timeToRun: '5 min' } },
+  { _id: 5926bbd9092ef82d48e9fc35,
+    name: 'ventTimeAction',
+    lastrun: 1495717945.011,
+    status: 'active',
+    runtime: 'every 60min',
+    params: { timeToRun: '300000' } },
+  { _id: 5926bbd9092ef82d48e9fc36,
+    name: 'vent2TimeAction',
+    lastrun: 1495717944.85,
+    status: 'active',
+    runtime: 'every 60min',
+    params: { timeToRun: '300000' } },
+  { _id: 5926bbe7092ef82d48e9fc37,
+    name: 'mqttDemo',
+    lastrun: 9495708029.782,
+    status: 'active',
+    runtime: '14:20 oclock',
+    params: { timeToRun: '30000' } } ]
+ACTION RUNNING: coAction
+false
+check if run RUNNUNG  0.63125 1
+check if run RUNNUNG  false
+ACTION RUNNING: tempAction
+false
+check if run RUNNUNG  0.6312 1
+check if run RUNNUNG  false
+ACTION RUNNING: huAction
+false 25 57
+ACTION RUNNING: lightAction
+false
+check if run RUNNUNG  0.9668333333333333 5
+check if run RUNNUNG  false
+ACTION RUNNING: mqttDemo
+false
+check if run RUNNUNG  17.672700000000003 20
+check if run RUNNUNG  false
+ACTION RUNNING: ventTimeAction
+false
+check if run RUNNUNG  12.93215 60
+check if run RUNNUNG  false
+ACTION RUNNING: vent2TimeAction
+false
+check if run RUNNUNG  12.93485 60
+check if run RUNNUNG  false
+ACTION RUNNING: mqttDemo
+false 25 20
+ACTION RUNNING: coAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: tempAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: huAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: lightAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: mqttDemo
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: ventTimeAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: vent2TimeAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: mqttDemo
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: [ { _id: 5914175db3807a24808527fe,
+    name: 'coAction',
+    lastrun: 1495718683.058,
+    status: 'active',
+    runtime: 'every 1min' },
+  { _id: 591c08915314ef111f87e55a,
+    name: 'tempAction',
+    lastrun: 1495718683.062,
+    status: 'tempAction',
+    runtime: 'every 1min' },
+  { _id: 5922d0d85314ef111f8be7be,
+    name: 'huAction',
+    lastrun: 1495709870.149,
+    status: 'tempAction',
+    runtime: '13:57 oclock' },
+  { _id: 5922d0ee5314ef111f8be7bf,
+    name: 'lightAction',
+    lastrun: 1495718662.927,
+    status: 'tempAction',
+    runtime: 'every 5min' },
+  { _id: 5923fab85314ef111f8be7c3,
+    name: 'mqttDemo',
+    lastrun: 1495717660.576,
+    status: 'active',
+    runtime: 'every 20min',
+    params: { timeToRun: '5 min' } },
+  { _id: 5926bbd9092ef82d48e9fc35,
+    name: 'ventTimeAction',
+    lastrun: 1495717945.011,
+    status: 'active',
+    runtime: 'every 60min',
+    params: { timeToRun: '300000' } },
+  { _id: 5926bbd9092ef82d48e9fc36,
+    name: 'vent2TimeAction',
+    lastrun: 1495717944.85,
+    status: 'active',
+    runtime: 'every 60min',
+    params: { timeToRun: '300000' } },
+  { _id: 5926bbe7092ef82d48e9fc37,
+    name: 'mqttDemo',
+    lastrun: 9495708029.782,
+    status: 'active',
+    runtime: '14:20 oclock',
+    params: { timeToRun: '30000' } } ]
+ACTION RUNNING: [ { _id: 5914175db3807a24808527fe,
+    name: 'coAction',
+    lastrun: 1495718683.058,
+    status: 'active',
+    runtime: 'every 1min' },
+  { _id: 591c08915314ef111f87e55a,
+    name: 'tempAction',
+    lastrun: 1495718683.062,
+    status: 'tempAction',
+    runtime: 'every 1min' },
+  { _id: 5922d0d85314ef111f8be7be,
+    name: 'huAction',
+    lastrun: 1495709870.149,
+    status: 'tempAction',
+    runtime: '13:57 oclock' },
+  { _id: 5922d0ee5314ef111f8be7bf,
+    name: 'lightAction',
+    lastrun: 1495718662.927,
+    status: 'tempAction',
+    runtime: 'every 5min' },
+  { _id: 5923fab85314ef111f8be7c3,
+    name: 'mqttDemo',
+    lastrun: 1495717660.576,
+    status: 'active',
+    runtime: 'every 20min',
+    params: { timeToRun: '5 min' } },
+  { _id: 5926bbd9092ef82d48e9fc35,
+    name: 'ventTimeAction',
+    lastrun: 1495717945.011,
+    status: 'active',
+    runtime: 'every 60min',
+    params: { timeToRun: '300000' } },
+  { _id: 5926bbd9092ef82d48e9fc36,
+    name: 'vent2TimeAction',
+    lastrun: 1495717944.85,
+    status: 'active',
+    runtime: 'every 60min',
+    params: { timeToRun: '300000' } },
+  { _id: 5926bbe7092ef82d48e9fc37,
+    name: 'mqttDemo',
+    lastrun: 9495708029.782,
+    status: 'active',
+    runtime: '14:20 oclock',
+    params: { timeToRun: '30000' } } ]
+ACTION RUNNING: coAction
+false
+check if run RUNNUNG  0.9652666666666666 1
+check if run RUNNUNG  false
+ACTION RUNNING: tempAction
+false
+check if run RUNNUNG  0.9652166666666666 1
+check if run RUNNUNG  false
+ACTION RUNNING: huAction
+false 25 57
+ACTION RUNNING: lightAction
+false
+check if run RUNNUNG  1.3008333333333333 5
+check if run RUNNUNG  false
+ACTION RUNNING: mqttDemo
+false
+check if run RUNNUNG  18.006700000000002 20
+check if run RUNNUNG  false
+ACTION RUNNING: ventTimeAction
+false
+check if run RUNNUNG  13.266150000000001 60
+check if run RUNNUNG  false
+ACTION RUNNING: vent2TimeAction
+false
+check if run RUNNUNG  13.268849999999999 60
+check if run RUNNUNG  false
+ACTION RUNNING: mqttDemo
+false 25 20
+ACTION RUNNING: coAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: tempAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: huAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: lightAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: mqttDemo
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: ventTimeAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: vent2TimeAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: mqttDemo
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: [ { _id: 5914175db3807a24808527fe,
+    name: 'coAction',
+    lastrun: 1495718683.058,
+    status: 'active',
+    runtime: 'every 1min' },
+  { _id: 591c08915314ef111f87e55a,
+    name: 'tempAction',
+    lastrun: 1495718683.062,
+    status: 'tempAction',
+    runtime: 'every 1min' },
+  { _id: 5922d0d85314ef111f8be7be,
+    name: 'huAction',
+    lastrun: 1495709870.149,
+    status: 'tempAction',
+    runtime: '13:57 oclock' },
+  { _id: 5922d0ee5314ef111f8be7bf,
+    name: 'lightAction',
+    lastrun: 1495718662.927,
+    status: 'tempAction',
+    runtime: 'every 5min' },
+  { _id: 5923fab85314ef111f8be7c3,
+    name: 'mqttDemo',
+    lastrun: 1495717660.576,
+    status: 'active',
+    runtime: 'every 20min',
+    params: { timeToRun: '5 min' } },
+  { _id: 5926bbd9092ef82d48e9fc35,
+    name: 'ventTimeAction',
+    lastrun: 1495717945.011,
+    status: 'active',
+    runtime: 'every 60min',
+    params: { timeToRun: '300000' } },
+  { _id: 5926bbd9092ef82d48e9fc36,
+    name: 'vent2TimeAction',
+    lastrun: 1495717944.85,
+    status: 'active',
+    runtime: 'every 60min',
+    params: { timeToRun: '300000' } },
+  { _id: 5926bbe7092ef82d48e9fc37,
+    name: 'mqttDemo',
+    lastrun: 9495708029.782,
+    status: 'active',
+    runtime: '14:20 oclock',
+    params: { timeToRun: '30000' } } ]
+ACTION RUNNING: [ { _id: 5914175db3807a24808527fe,
+    name: 'coAction',
+    lastrun: 1495718683.058,
+    status: 'active',
+    runtime: 'every 1min' },
+  { _id: 591c08915314ef111f87e55a,
+    name: 'tempAction',
+    lastrun: 1495718683.062,
+    status: 'tempAction',
+    runtime: 'every 1min' },
+  { _id: 5922d0d85314ef111f8be7be,
+    name: 'huAction',
+    lastrun: 1495709870.149,
+    status: 'tempAction',
+    runtime: '13:57 oclock' },
+  { _id: 5922d0ee5314ef111f8be7bf,
+    name: 'lightAction',
+    lastrun: 1495718662.927,
+    status: 'tempAction',
+    runtime: 'every 5min' },
+  { _id: 5923fab85314ef111f8be7c3,
+    name: 'mqttDemo',
+    lastrun: 1495717660.576,
+    status: 'active',
+    runtime: 'every 20min',
+    params: { timeToRun: '5 min' } },
+  { _id: 5926bbd9092ef82d48e9fc35,
+    name: 'ventTimeAction',
+    lastrun: 1495717945.011,
+    status: 'active',
+    runtime: 'every 60min',
+    params: { timeToRun: '300000' } },
+  { _id: 5926bbd9092ef82d48e9fc36,
+    name: 'vent2TimeAction',
+    lastrun: 1495717944.85,
+    status: 'active',
+    runtime: 'every 60min',
+    params: { timeToRun: '300000' } },
+  { _id: 5926bbe7092ef82d48e9fc37,
+    name: 'mqttDemo',
+    lastrun: 9495708029.782,
+    status: 'active',
+    runtime: '14:20 oclock',
+    params: { timeToRun: '30000' } } ]
+ACTION RUNNING: coAction
+true
+check if run RUNNUNG  1.3006666666666669 1
+check if run RUNNUNG  true
+ACTION RUNNING: tempAction
+true
+check if run RUNNUNG  1.3006166666666668 1
+check if run RUNNUNG  true
+ACTION RUNNING: huAction
+false 26 57
+ACTION RUNNING: lightAction
+false
+check if run RUNNUNG  1.6362333333333334 5
+check if run RUNNUNG  false
+ACTION RUNNING: mqttDemo
+false
+check if run RUNNUNG  18.342133333333333 20
+check if run RUNNUNG  false
+ACTION RUNNING: ventTimeAction
+false
+check if run RUNNUNG  13.601583333333334 60
+check if run RUNNUNG  false
+ACTION RUNNING: vent2TimeAction
+false
+check if run RUNNUNG  13.6043 60
+check if run RUNNUNG  false
+ACTION RUNNING: mqttDemo
+false 26 20
+ACTION RUNNING: coAction
+UPDATING LAST RUNNNNNNNNNN undefined true undefined
+UPDATING LAST RUNNNNNNNNNN
+RESULTSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+ACTION RUNNING: tempAction
+UPDATING LAST RUNNNNNNNNNN undefined true undefined
+UPDATING LAST RUNNNNNNNNNN
+TEMPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPnvb vb
+ACTION RUNNING: huAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: lightAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: mqttDemo
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: ventTimeAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: vent2TimeAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: mqttDemo
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RESPONCE: { co: undefined }
+WWWWWWWWWWWWWWWWWWWWWWWWW { co: undefined }
+ACTION RESPONCE: { temp: '25.32' }
+WWWWWWWWWWWWWWWWWWWWWWWWW { temp: '25.32' }
+{ _id: 591c08915314ef111f87e55a,
+  name: 'tempAction',
+  lastrun: 1495718683.062,
+  status: 'tempAction',
+  runtime: 'every 1min' } 'ACTIONNNNNNNNN'
+{ _id: 591c08915314ef111f87e55a,
+  name: 'tempAction',
+  lastrun: 1495718763.225,
+  status: 'tempAction',
+  runtime: 'every 1min' } 591c08915314ef111f87e55a 1.1111111111111112e+31
+{ _id: 5914175db3807a24808527fe,
+  name: 'coAction',
+  lastrun: 1495718683.058,
+  status: 'active',
+  runtime: 'every 1min' } 'ACTIONNNNNNNNN'
+{ _id: 5914175db3807a24808527fe,
+  name: 'coAction',
+  lastrun: 1495718763.247,
+  status: 'active',
+  runtime: 'every 1min' } 5914175db3807a24808527fe 1.1111111111111112e+31
+ACTION RUNNING: [ { _id: 5914175db3807a24808527fe,
+    name: 'coAction',
+    lastrun: 1495718763.247,
+    status: 'active',
+    runtime: 'every 1min' },
+  { _id: 591c08915314ef111f87e55a,
+    name: 'tempAction',
+    lastrun: 1495718763.225,
+    status: 'tempAction',
+    runtime: 'every 1min' },
+  { _id: 5922d0d85314ef111f8be7be,
+    name: 'huAction',
+    lastrun: 1495709870.149,
+    status: 'tempAction',
+    runtime: '13:57 oclock' },
+  { _id: 5922d0ee5314ef111f8be7bf,
+    name: 'lightAction',
+    lastrun: 1495718662.927,
+    status: 'tempAction',
+    runtime: 'every 5min' },
+  { _id: 5923fab85314ef111f8be7c3,
+    name: 'mqttDemo',
+    lastrun: 1495717660.576,
+    status: 'active',
+    runtime: 'every 20min',
+    params: { timeToRun: '5 min' } },
+  { _id: 5926bbd9092ef82d48e9fc35,
+    name: 'ventTimeAction',
+    lastrun: 1495717945.011,
+    status: 'active',
+    runtime: 'every 60min',
+    params: { timeToRun: '300000' } },
+  { _id: 5926bbd9092ef82d48e9fc36,
+    name: 'vent2TimeAction',
+    lastrun: 1495717944.85,
+    status: 'active',
+    runtime: 'every 60min',
+    params: { timeToRun: '300000' } },
+  { _id: 5926bbe7092ef82d48e9fc37,
+    name: 'mqttDemo',
+    lastrun: 9495708029.782,
+    status: 'active',
+    runtime: '14:20 oclock',
+    params: { timeToRun: '30000' } } ]
+ACTION RUNNING: [ { _id: 5914175db3807a24808527fe,
+    name: 'coAction',
+    lastrun: 1495718763.247,
+    status: 'active',
+    runtime: 'every 1min' },
+  { _id: 591c08915314ef111f87e55a,
+    name: 'tempAction',
+    lastrun: 1495718763.225,
+    status: 'tempAction',
+    runtime: 'every 1min' },
+  { _id: 5922d0d85314ef111f8be7be,
+    name: 'huAction',
+    lastrun: 1495709870.149,
+    status: 'tempAction',
+    runtime: '13:57 oclock' },
+  { _id: 5922d0ee5314ef111f8be7bf,
+    name: 'lightAction',
+    lastrun: 1495718662.927,
+    status: 'tempAction',
+    runtime: 'every 5min' },
+  { _id: 5923fab85314ef111f8be7c3,
+    name: 'mqttDemo',
+    lastrun: 1495717660.576,
+    status: 'active',
+    runtime: 'every 20min',
+    params: { timeToRun: '5 min' } },
+  { _id: 5926bbd9092ef82d48e9fc35,
+    name: 'ventTimeAction',
+    lastrun: 1495717945.011,
+    status: 'active',
+    runtime: 'every 60min',
+    params: { timeToRun: '300000' } },
+  { _id: 5926bbd9092ef82d48e9fc36,
+    name: 'vent2TimeAction',
+    lastrun: 1495717944.85,
+    status: 'active',
+    runtime: 'every 60min',
+    params: { timeToRun: '300000' } },
+  { _id: 5926bbe7092ef82d48e9fc37,
+    name: 'mqttDemo',
+    lastrun: 9495708029.782,
+    status: 'active',
+    runtime: '14:20 oclock',
+    params: { timeToRun: '30000' } } ]
+ACTION RUNNING: coAction
+false
+check if run RUNNUNG  0.2979833333333334 1
+check if run RUNNUNG  false
+ACTION RUNNING: tempAction
+false
+check if run RUNNUNG  0.2984 1
+check if run RUNNUNG  false
+ACTION RUNNING: huAction
+false 26 57
+ACTION RUNNING: lightAction
+false
+check if run RUNNUNG  1.9701166666666665 5
+check if run RUNNUNG  false
+ACTION RUNNING: mqttDemo
+false
+check if run RUNNUNG  18.67598333333333 20
+check if run RUNNUNG  false
+ACTION RUNNING: ventTimeAction
+false
+check if run RUNNUNG  13.935433333333332 60
+check if run RUNNUNG  false
+ACTION RUNNING: vent2TimeAction
+false
+check if run RUNNUNG  13.93815 60
+check if run RUNNUNG  false
+ACTION RUNNING: mqttDemo
+false 26 20
+ACTION RUNNING: coAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: tempAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: huAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: lightAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: mqttDemo
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: ventTimeAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: vent2TimeAction
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
+ACTION RUNNING: mqttDemo
+UPDATING LAST RUNNNNNNNNNN undefined false undefined
