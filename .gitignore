@@ -1,0 +1,6 @@
+Front/node_modules
+Front/dist
+Front/.tmp
+Front/.sass-cache
+Front/bower_components
+Back/node_modules

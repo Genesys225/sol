@@ -1,0 +1,75 @@
+<div ng-controller="actionsManager" ng-cloak layout="row">
+
+
+
+    <md-content ng-model="actions" md-theme="docs-dark"  layout-padding>
+
+
+
+ <md-toolbar class="md-hue-2">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
+          <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+        </md-button>
+
+        <h2 flex md-truncate>Actions Manager</h2>
+
+        <md-button class="md-icon-button" aria-label="Favorite">
+          <md-icon md-svg-icon="img/icons/favorite.svg" style="color: greenyellow;"></md-icon>
+        </md-button>
+
+        <md-button class="md-icon-button" aria-label="More">
+          <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+
+
+
+  <table>
+    <tr ng-repeat="action in actions">
+      <td>  <md-button ng-click="addAction(action)">add</md-button></td>
+      <td>  <md-button ng-click="deleteAction(action)">delete</md-button></td>
+      <td>  <md-button ng-click="subbmitAction(action)">subbmit</md-button></td>
+      <td>
+        <md-input-container>
+          <label>Action Name</label>
+          <input ng-model="action.name">
+        </md-input-container>
+      </td>
+      <td>
+        <md-input-container>
+          <label>runtime in min</label>
+          <input ng-model="action.runtime">
+        </md-input-container>
+      </td>
+      <td>
+        <md-input-container>
+          <label>Time to run (ms)</label>
+          <input ng-model="action.params.timeToRun">
+        </md-input-container>
+      </td>
+      <td>
+        <md-input-container>
+          <label>last Run</label>
+          <input ng-model="action.lastrun">
+        </md-input-container>
+      </td>
+
+      <td>
+        <md-input-container>
+          <label>State</label>
+          <md-select ng-model="someModel">
+            <md-option ng-value="opt" ng-repeat="opt in timeSelector">{{ opt }}</md-option>
+          </md-select>
+        </md-input-container>
+      </td>
+      
+      <td></td>
+
+    </tr>
+  </table>
+
+</md-content>
+ 
