@@ -14,6 +14,7 @@
     "file-system-store": "^1.1.2",
     "moment": "^2.18.1",
     "mongo-portable": "^1.3.2",
+    "mongodb": "^2.2.27",
     "mqtt": "^2.7.2"
   }
 }
