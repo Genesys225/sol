@@ -27,14 +27,15 @@ angular.module('sol2App')
 
 
     ]
-    $http.get('http://localhost:3000/getActions')
+    var apiAddress = 'http://10.0.0.7:3000'
+    $http.get(apiAddress+'/getActions')
       .then(function (response) {
 
         $scope.actions = response.data
       })
     $scope.subbmitAction = function (action) {
       $http({
-          url: 'http://localhost:3000/setActions',
+          url: apiAddress+'/setActions',
           method: "POST",
           data: [action]
         })
@@ -64,7 +65,7 @@ angular.module('sol2App')
 
     $scope.subbmit = function () {
       $http({
-          url: 'http://localhost:3000/setActions',
+          url: apiAddress+'/setActions',
           method: "POST",
           data: $scope.actions
         })
