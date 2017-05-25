@@ -20,6 +20,7 @@ angular.module('sol2App')
 angular.module('sol2App')
 
   .controller('MainCtrl', function ($scope, $mdDialog, $http) {
+     var apiAddress = 'http://10.0.0.7:3000'
     //switch demo mqtt on off
     $scope.message = 'false';
    //switch demo mqtt on off
@@ -61,7 +62,7 @@ angular.module('sol2App')
       }
 
       $http({
-          url: 'http://localhost:3000/runAction',
+          url: apiAddress+'/runAction',
           method: "POST",
           data: actionToRun
         })
@@ -112,7 +113,7 @@ angular.module('sol2App')
     };
 
     setInterval(function () {
-      $http.get('http://localhost:3000/getAllLog').then(function (response) {
+      $http.get(apiAddress+'/getAllLog').then(function (response) {
         console.log(response, 55555555)
         $scope.ResData = response.data;
         var coChartData = []
