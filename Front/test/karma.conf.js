@@ -33,6 +33,9 @@ module.exports = function(config) {
       'bower_components/angular-material/angular-material.js',
       'bower_components/chart.js/dist/Chart.js',
       'bower_components/angular-chart.js/dist/angular-chart.js',
+      'bower_components/moment/moment.js',
+      'bower_components/angular-moment/angular-moment.js',
+      'bower_components/angular-circular-timepicker/dist/javascript/angular.circular.timepicker.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

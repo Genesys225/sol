@@ -8,19 +8,16 @@ class coAction extends baseAction {
     //Switch Relay4cha03   {mqtt=">[mosquitto:openhab/out/4chR0/3:command:ON:ON],>[mosquitto:openhab/out/4chR0/3:command:OFF:OFF]"}
     run(mqttManage, params) {
 
+       var addr = mqttManage.map();
         var promise = new Promise(function (resolve, reject) {
-            mqttManage.publish('openhab/out/4chR0/2', 'ON')
+
+            mqttManage.publish(addr.vent1_on, 1)
+    
             setTimeout(function () {
 
-                mqttManage.publish('openhab/out/4chR0/2', 'OFF')
-                mqttManage.publish('openhab/out/4chR0/4', 'ON')
-                
-                setTimeout(function () {
-                    mqttManage.publish('openhab/out/4chR0/4', 'OFF')
-                }, params.timeToRun)
-
+                mqttManage.publish(addr.vent1_off, 0)
                 resolve({
-                    switch: 'Timer Stopped'
+                    autovent: 'Timer Stopped'
                 })
             }, params.timeToRun);
 

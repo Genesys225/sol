@@ -1,0 +1,170 @@
+<div ng-controller="actionsManager" ng-cloak layout="row">
+  <!--
+<md-list ng-cloak>
+    <md-toolbar class="md-hue-2">
+        <div class="md-toolbar-tools">
+            <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
+                <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+            </md-button>
+
+            <h2 flex md-truncate>All Actions</h2>
+
+            <md-button class="md-icon-button" aria-label="Favorite">
+                <md-icon md-svg-icon="img/icons/more_vert.svg" style="color: greenyellow;"></md-icon>
+            </md-button>
+
+            <md-button class="md-icon-button" ng-click="subbmit()" aria-label="More">
+                <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
+            </md-button>
+
+        </div>
+    </md-toolbar>
+    <md-subheader class="md-no-sticky">All Actions</md-subheader>
+
+
+    <md-button class="md-icon-button" ng-click="subbmit()" aria-label="More">
+        <md-icon md-svg-icon="img/icons/ic_note_add_24px.svg"></md-icon>
+    </md-button>
+    <div ng-repeat="action in actions track by $index">
+        <md-divider></md-divider>
+
+        <md-subheader class="md-no-sticky">Action Settings:
+            <md-input-container>
+                <md-select ng-model="action.name" placeholder="actions" class="md-no-underline">
+
+                    <md-option ng-repeat="action in avalibleActions()" value="{{action.name}}">{{action.name}}</md-option>
+                </md-select>
+            </md-input-container>
+        </md-subheader>
+
+        <md-list-item>
+
+        </md-list-item>
+        <md-list-item>
+
+
+            <md-content>
+
+
+                <circulartimepicker ng-click="setEvery(now,$index)" model="now" format="{momentFormat:'------'}">
+
+                </circulartimepicker>
+            </md-content>
+            <md-input-container>
+                <label>runtime</label>
+
+                <input ng-model="actions[$index].runtime">
+            </md-input-container>
+
+
+
+            <md-input-container>
+                <label>lastrun</label>
+
+                <input ng-model="actions[$index].lastrun">
+            </md-input-container>
+
+
+
+            <md-input-container ng-repeat="(key,value) in actions[$index].params">
+                <label>{{key}}</label>
+                <input ng-model="value">
+            </md-input-container>
+
+
+
+
+
+
+            {{ action.status }}
+            <md-checkbox ng-model='action.status' ng-true-value="'enabled'" ng-false-value="'disabled'">
+
+            </md-checkbox>
+        </md-list-item>
+
+
+    </div>
+
+</md-list>
+
+-->
+    <md-content ng-model="actions" md-theme="docs-dark"  layout-padding>
+
+
+
+ <md-toolbar class="md-hue-2">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
+          <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+        </md-button>
+
+        <h2 flex md-truncate>Actions Manager</h2>
+
+        <md-button class="md-icon-button" aria-label="Favorite">
+          <md-icon md-svg-icon="img/icons/favorite.svg" style="color: greenyellow;"></md-icon>
+        </md-button>
+
+        <md-button class="md-icon-button" aria-label="More">
+          <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+
+
+
+  <table>
+    <tr ng-repeat="action in actions">
+      <td>  <md-button ng-click="addAction(action)">add</md-button></td>
+      <td>  <md-button ng-click="deleteAction(action)">delete</md-button></td>
+      <td>  <md-button ng-click="subbmitAction(action)">subbmit</md-button></td>
+      <td>  <md-button ng-click="runActionForce(action)">run</md-button></td>
+      <td>
+        <md-input-container>
+          <label>Action Name</label>
+          <input ng-model="action.name">
+        </md-input-container>
+      </td>
+      <td>
+        <circulartimepicker model="data.date"></circulartimepicker>
+        <md-input-container>
+          <label>runtime in min</label>
+          <input ng-model="action.runtime">
+        </md-input-container>
+      </td>
+      <td>
+        
+        <md-input-container>
+          <label>Time to run (ms)</label>
+          <input ng-model="action.params.timeToRun">
+        </md-input-container>
+      </td>
+    
+      <td>
+       <span am-time-ago="action.lastrun  | amFromUnix">
+   
+           <!--
+        <md-input-container>
+         
+          <label>last Run</label>
+          <input ng-model="action.lastrun">
+        </md-input-container>
+        -->
+      </td>
+
+      <td>
+        <md-input-container>
+          <label>State</label>
+          <md-select ng-model="someModel">
+            <md-option ng-value="opt" ng-repeat="opt in timeSelector">{{ opt }}</md-option>
+          </md-select>
+        </md-input-container>
+      </td>
+      
+      <td></td>
+
+    </tr>
+  </table>
+
+</md-content>
+ 

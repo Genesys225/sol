@@ -1,29 +1,262 @@
+<md-content class="md-padding" layout="row">
+  <div flex flex-gt-xs="20">
+
+
+
+
+    <!--********************select date ranged from date (for charts)********************-->
+    <md-input-container>
+      <label>State</label>
+      <md-select ng-model="selectedTimeRange">
+        <md-option><em>1</em></md-option>
+        <md-option><em>2</em></md-option>
+        <md-option><em>3</em></md-option>
+        <md-option><em>4</em></md-option>
+
+      </md-select>
+    </md-input-container>
+    <!--********************select date ranged from date (for charts)********************-->
+
+    <!--******************************************co card****************************************-->
+
+
+
+
+    <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline">CO</span>
+          <span class="md-headline">{{chartData['co_status'].slice(-1)[0]}}</span>
+          <!--
+      <pre>
+        {{chartData['co_status'] | json}}
+      </pre>
+    -->
+          <pre class="md-headline">all  {{arrayToString(chartData['co_status'])}}</pre>
+
+        </md-card-title-text>
+        <md-card-title-media>
+          <div class="md-media-lg card-media"></div>
+        </md-card-title-media>
+      </md-card-title>
+
+      <canvas id="line2" class="chart chart-line" chart-data="chartData['co_status']" chart-labels="chartsXtimesstamp['co_status']" chart-series="series"
+        chart-options="options" chart-dataset-override="datasetOverride" chart-click="onClick">
+      </canvas>
+
+
+      <md-card-actions layout="row" layout-align="end center">
+        <md-button ng-click="co_on()">ON</md-button>
+        <md-button ng-click="co_off()">OFF</md-button>
+      </md-card-actions>
+    </md-card>
+    <!--******************************************co card****************************************-->
+
+
+    <!--******************************************Humidity card****************************************-->
+
+
+
+
+    <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline">Humidity</span>
+          <span class="md-headline">{{chartData['hum_status'].slice(-1)[0]}}</span>
+        </md-card-title-text>
+        <md-card-title-media>
+          <div class="md-media-lg card-media"></div>
+        </md-card-title-media>
+      </md-card-title>
+
+      <canvas id="line2" class="chart chart-line" chart-data="chartData['hum_status']" chart-labels="chartsXtimesstamp['hum_status']" chart-series="series"
+        chart-options="options" chart-dataset-override="datasetOverride" chart-click="onClick">
+      </canvas>
+
+
+      <md-card-actions layout="row" layout-align="end center">
+        <md-button ng-click="hum_on()">ON</md-button>
+        <md-button ng-click="hum_off()">OFF</md-button>
+      </md-card-actions>
+    </md-card>
+    <!--******************************************Humidity card****************************************-->
+
+
+
+
+    <!--****************************************** temp****************************************-->
+    <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline">Temp</span>
+          <span class="md-headline">{{chartData['temp_status'].slice(-1)[0]}}</span>
+        </md-card-title-text>
+        <md-card-title-media>
+          <div class="md-media-lg card-media"></div>
+        </md-card-title-media>
+      </md-card-title>
+
+      <canvas id="line2" class="chart chart-line" chart-data="chartData['temp_status']" chart-labels="chartsXtimesstamp['temp_status']" chart-series="series"
+        chart-options="options" chart-dataset-override="datasetOverride" chart-click="onClick">
+      </canvas>
+
+
+      <md-card-actions layout="row" layout-align="end center">
+        <md-button ng-click="cool_on()">ON</md-button>
+        <md-button ng-click="cool_off()">OFF</md-button>
+      </md-card-actions>
+    </md-card>
+    <!--****************************************** temp****************************************-->
+
+
+
+
+
+
+
+
+
+    <!--****************************************** light****************************************-->
+    <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline">LIGHT</span>
+          <span class="md-headline">{{chartData['light_status'].slice(-1)[0]}}</span>
+        </md-card-title-text>
+        <md-card-title-media>
+          <div class="md-media-lg card-media"></div>
+        </md-card-title-media>
+      </md-card-title>
+
+      <canvas id="line2" class="chart chart-line" chart-data="chartData['light_status']" chart-labels="chartsXtimesstamp['light_status']" chart-series="series"
+        chart-options="options" chart-dataset-override="datasetOverride" chart-click="onClick">
+      </canvas>
+
+
+      <md-card-actions layout="row" layout-align="end center">
+        <md-button ng-click="light_on()">ON</md-button>
+        <md-button ng-click="light_off()">OFF</md-button>
+      </md-card-actions>
+    </md-card>
+    <!--****************************************** light****************************************-->
+
+
+
+    <!--****************************************** vent1****************************************-->
+    <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline">VENT 1</span>
+          <span class="md-headline">RUNNING.....</span>
+        </md-card-title-text>
+        <md-card-title-media>
+          <div class="md-media-lg card-media"></div>
+        </md-card-title-media>
+      </md-card-title>
+      <md-card-actions layout="row" layout-align="end center">
+        <md-button ng-click="vent1_on()">ON</md-button>
+        <md-button ng-click="vent1_off()">OFF</md-button>
+      </md-card-actions>
+    </md-card>
+    <!--****************************************** vent1****************************************-->
+
+
+
+
+    <!--****************************************** vent2****************************************-->
+    <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline">VENT 2</span>
+          <span class="md-headline">RUNNING.....</span>
+        </md-card-title-text>
+        <md-card-title-media>
+          <div class="md-media-lg card-media"></div>
+        </md-card-title-media>
+      </md-card-title>
+      <md-card-actions layout="row" layout-align="end center">
+        <md-button ng-click="vent2_on()">ON</md-button>
+        <md-button ng-click="vent2_off()">OFF</md-button>
+      </md-card-actions>
+    </md-card>
+    <!--****************************************** vent2****************************************-->
+
+
+
+    <!--****************************************** water1****************************************-->
+    <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline">WATER 1</span>
+          <span class="md-headline">RUNNING.....</span>
+        </md-card-title-text>
+        <md-card-title-media>
+          <div class="md-media-lg card-media"></div>
+        </md-card-title-media>
+      </md-card-title>
+      <md-card-actions layout="row" layout-align="end center">
+        <md-button ng-click="water1_on()">ON</md-button>
+        <md-button ng-click="water1_off()">OFF</md-button>
+      </md-card-actions>
+    </md-card>
+    <!--******************************************water1****************************************-->
+
+
+
+
+    <!--****************************************** water2****************************************-->
+    <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline">WATER 2</span>
+          <span class="md-headline">RUNNING.....</span>
+        </md-card-title-text>
+        <md-card-title-media>
+          <div class="md-media-lg card-media"></div>
+        </md-card-title-media>
+      </md-card-title>
+      <md-card-actions layout="row" layout-align="end center">
+        <md-button ng-click="water2_on()">ON</md-button>
+        <md-button ng-click="water2_off()">OFF</md-button>
+      </md-card-actions>
+    </md-card>
+    <!--****************************************** water2****************************************-->
+
+
+  </div>
+</md-content>
+
+
 
 
 
 <table>
-<tr>
-  <td><canvas id="line" class="chart chart-line" chart-data="coData"
-chart-labels="labels" chart-series="series" chart-options="options"
-chart-dataset-override="datasetOverride" chart-click="onClick">
-</canvas></td>
-  <td><canvas id="line2" class="chart chart-line" chart-data="tempData"
-chart-labels="labels" chart-series="series" chart-options="options"
-chart-dataset-override="datasetOverride" chart-click="onClick">
-</canvas></td>
-</tr>
+  <tr>
+    <td>
+      <canvas id="line" class="chart chart-line" chart-data="coData" chart-labels="labels" chart-series="series" chart-options="options"
+        chart-dataset-override="datasetOverride" chart-click="onClick">
+      </canvas>
+    </td>
+    <td>
+      <canvas id="line2" class="chart chart-line" chart-data="tempData" chart-labels="labels" chart-series="series" chart-options="options"
+        chart-dataset-override="datasetOverride" chart-click="onClick">
+      </canvas>
+    </td>
+  </tr>
 
 
-<tr>
-  <td><canvas id="line2" class="chart chart-line" chart-data="huData"
-chart-labels="labels" chart-series="series" chart-options="options"
-chart-dataset-override="datasetOverride" chart-click="onClick">
-</canvas></td>
-  <td><canvas id="line2" class="chart chart-line" chart-data="lightData"
-chart-labels="labels" chart-series="series" chart-options="options"
-chart-dataset-override="datasetOverride" chart-click="onClick">
-</canvas></td>
-</tr>
+  <tr>
+    <td>
+      <canvas id="line2" class="chart chart-line" chart-data="huData" chart-labels="labels" chart-series="series" chart-options="options"
+        chart-dataset-override="datasetOverride" chart-click="onClick">
+      </canvas>
+    </td>
+    <td>
+      <canvas id="line2" class="chart chart-line" chart-data="lightData" chart-labels="labels" chart-series="series" chart-options="options"
+        chart-dataset-override="datasetOverride" chart-click="onClick">
+      </canvas>
+    </td>
+  </tr>
 
 </table>
 
@@ -31,8 +264,8 @@ chart-dataset-override="datasetOverride" chart-click="onClick">
 
 
 
- <md-switch ng-model="data.cb6" aria-label="Switch 6" ng-change="onChange(data.cb6)">
-    Switch 6 message: {{ message }}
-  </md-switch>
+<md-switch ng-model="data.cb6" aria-label="Switch 6" ng-change="onChange(data.cb6)">
+  Switch 6 message: {{ message }}
+</md-switch>
 
 </div>

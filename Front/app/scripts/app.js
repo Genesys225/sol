@@ -7,7 +7,7 @@
  * # sol2App
  *
  * Main module of the application.
- */
+ */ 
 angular
   .module('sol2App', [
     'ngAnimate',
@@ -17,7 +17,11 @@ angular
     'ngSanitize',
     'ngTouch',
     'ngMaterial',
-    "chart.js", 'ngMessages'
+    "chart.js", 
+    'ngMessages', 
+    'angularMoment', 
+    'angular.circular.datetimepicker',
+    //'angular.circular.timepicker'
   ])
   .config(function ($routeProvider) {
     $routeProvider

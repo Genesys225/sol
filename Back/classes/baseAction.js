@@ -1,5 +1,9 @@
-class baseAction{
-    constructor(){}
+
+class baseAction {
+    constructor(){
+      
+        console.log("TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",this)
+    }
     getName(){
         return this.name
     }

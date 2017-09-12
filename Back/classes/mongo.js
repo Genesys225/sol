@@ -25,90 +25,116 @@ addAction(newAction,function(){
 
 function addAction(newAction, callback) {
 
-        MongoClient.connect(url, function (err, db) {
+    MongoClient.connect(url, function (err, db) {
 
-console.log(newAction,88898989898)
- if(newAction!=undefined){
-            if(newAction._id!=undefined){
+        console.log(newAction, 88898989898)
+        if (newAction != undefined) {
+            if (newAction._id != undefined) {
                 newAction._id = new ObjectID(newAction._id)
-            }else{
+            } else {
                 newAction._id = new ObjectID()
             }
- }
-            var collection = db.collection("actions");
-            collection.save(newAction, function(res){
-                    callback(res)
-            });
-
-            db.close();
+        }
+        var collection = db.collection("actions");
+        collection.save(newAction, function (res) {
+            callback(res)
         });
-    
+
+        db.close();
+    });
+
 
 }
 
 function writeToLog(data) {
- var promise = new Promise(function(resolve,reject){
-     console.log('WWWWWWWWWWWWWWWWWWWWWWWWW',data)
+    var promise = new Promise(function (resolve, reject) {
+        console.log('WWWWWWWWWWWWWWWWWWWWWWWWW', data)
         MongoClient.connect(url, function (err, db) {
             var collection = db.collection("log");
-            collection.save(data, function(res){
-                    resolve(res)
+            data.timestamp = (new Date).getTime() / 1000
+            collection.save(data, function (res) {
+                resolve(res)
             });
 
             db.close();
         });
-        })
+    })
 
-    
-return promise
+
+    return promise
 
 }
 
 
 function getAllAction() {
-    var promise = new Promise(function(resolve,reject){
+    var promise = new Promise(function (resolve, reject) {
         MongoClient.connect(url, function (err, db) {
             var collection = db.collection("actions");
-            collection.find({}).toArray(function(err,docs){
-               resolve(docs)
+            collection.find({}).toArray(function (err, docs) {
+                resolve(docs)
             });
             db.close();
         });
     })
-return promise
+    return promise
+}
+
+
+function getLogResults(from, to) {
+    var promise = new Promise(function (resolve, reject) {
+        MongoClient.connect(url, function (err, db) {
+            var collection = db.collection("log");
+            collection.find({
+                timestamp: {
+                
+                        $gte: from,
+                        $lt: to
+                    
+                }
+            }).toArray(function (err, docs) {
+                // console.log(docs);
+                resolve(docs)
+                db.close();
+            });
+            // db.close();
+        });
+    })
+    return promise
 }
 
 
 function getAllLog() {
-    var promise = new Promise(function(resolve,reject){
+    var promise = new Promise(function (resolve, reject) {
         MongoClient.connect(url, function (err, db) {
             var collection = db.collection("log");
-            collection.find().toArray(function(err, docs) {
- // console.log(docs);
-   resolve(docs)
-  db.close();
-});
-           // db.close();
+            collection.find().toArray(function (err, docs) {
+                // console.log(docs);
+                resolve(docs)
+                db.close();
+            });
+            // db.close();
         });
     })
-return promise
+    return promise
 }
 
 
 
 function updateActionLastRun(action) {
-    var promise = new Promise(function(resolve,reject){
+    var promise = new Promise(function (resolve, reject) {
         MongoClient.connect(url, function (err, db) {
-            console.log(action,"ACTIONNNNNNNNN")
+            console.log(action, "ACTIONNNNNNNNN")
             var collection = db.collection("actions");
             action._id = new ObjectID(action._id)
-            action.lastrun =  (new Date).getTime() / 1000
-         console.log(action, new ObjectID(action._id),11111111111111111111111111111111)
-            collection.save(action).then(function(res){resolve (res)})
+            action.lastrun = (new Date).getTime() / 1000
+            console.log(action, new ObjectID(action._id), 11111111111111111111111111111111)
+            collection.save(action).then(function (res) {
+                resolve(res)
+            })
             db.close();
         });
     })
-return promise
+    return promise
 }
 
 
@@ -117,7 +143,8 @@ return promise
 
 
 var mongo = {}
-mongo.getAllLog=getAllLog
+mongo.getLogResults =getLogResults
+mongo.getAllLog = getAllLog
 mongo.getActions = getAllAction
 mongo.writeToLog = writeToLog
 mongo.addAction = addAction

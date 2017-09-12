@@ -11,7 +11,9 @@
     "angular-touch": "^1.4.0",
     "angular-material": "^1.1.4",
     "jquery": "^3.2.1",
-    "angular-chart.js": "^1.1.1"
+    "angular-chart.js": "^1.1.1",
+    "angular-moment": "^1.0.1",
+    "angular-circular-timepicker": "*"
   },
   "devDependencies": {
     "angular-mocks": "^1.4.0"
