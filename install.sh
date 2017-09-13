@@ -1,6 +1,8 @@
 #prerequisits 
-apt install nodejs
-npm install bower forever
+apt -y install nodejs
+yum install nodejs -y
+npm install bower forever -g
+
 cd Front
 npm install
 bower install
