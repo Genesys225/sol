@@ -61,15 +61,15 @@ angular.module('sol2App')
             console.log('NEXT RUNNNNN:', myDiff, 'DATE1', lastRun, 'DATE2', new Date, (runTime.getHours() * 60) + runTime.getMinutes())
             var a = moment(new Date); //now
             var b = moment(new Date(lastRun));
-            console.log('RUN EVERY in min:', (runTime.getHours() * 60) + runTime.getMinutes())
-            console.log('LAST RUN:', lastRun)
-            console.log('DIFF IN MIN:', a.diff(b, 'minutes'))
-            console.log('RUN:', a.diff(b, 'minutes') > (runTime.getHours() * 60) + runTime.getMinutes())
+          //  console.log('RUN EVERY in min:', (runTime.getHours() * 60) + runTime.getMinutes())
+          //  console.log('LAST RUN:', lastRun)
+          //  console.log('DIFF IN MIN:', a.diff(b, 'minutes'))
+          //  console.log('RUN:', a.diff(b, 'minutes') > (runTime.getHours() * 60) + runTime.getMinutes())
             var myDiff = a.diff(b, 'minutes')
             console.log() // 44700
-            console.log(a.diff(b, 'hours')) // 745
-            console.log(a.diff(b, 'days')) // 31
-            console.log(a.diff(b, 'seconds')) // 4
+         //   console.log(a.diff(b, 'hours')) // 745
+        //    console.log(a.diff(b, 'days')) // 31
+         //   console.log(a.diff(b, 'seconds')) // 4
            var nextRunInMin =  (runTime.getHours() * 60) + runTime.getMinutes()-a.diff(b, 'minutes');
            var newD = new Date()
            newD.setMinutes(newD.getMinutes()+nextRunInMin)

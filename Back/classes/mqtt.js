@@ -85,14 +85,67 @@ class mqttManager {
 
 
 
+    createMqttServer(){
 
+        var mosca = require('mosca');
+        var ascoltatore = {
+          //using ascoltatore
+        //  json:true,
+     //     return_buffers: true,
+          type: 'mongo',
+          url: 'mongodb://test:test12345@ds137281.mlab.com:37281/green324',
+          pubsubCollection: 'ascoltatori',
+          mongo: {}
+        };
+        
+        var settings = {
+          port: 1883,
+          backend: ascoltatore
+        };
+        
+        var server = new mosca.Server(settings);
+        
+        server.on('clientConnected', function(client) {
+            console.log('client connected', client.id);
+        });
+        
+        // fired when a message is received
+        server.on('published', function(packet, client) {
+      
+      function b64DecodeUnicode(str) {
+        // Going backwards: from bytestream, to percent-encoding, to original string.
+        return decodeURIComponent(atob(str).split('').map(function(c) {
+            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+        }).join(''));
+    }
+
+   if(typeof(packet.payload) === 'object'){
+    //   console.log(packet)
+    var stringBuf = packet.payload.toString('utf-8');
+  //  var obj = JSON.parse(stringBuf);
+    console.log('STATUS MQTT ROW: ',packet.topic,":" ,stringBuf);
+   }else{
+    //console.log('Published', (packet.payload), typeof(packet.payload));
+   }
+    
+    
+        });
+        
+        server.on('ready', setup);
+        
+        // fired when the mqtt server is ready
+        function setup() {
+          console.log('Mosca server is up and running');
+        }
+    }
 
     connectMq() {
+        this.createMqttServer()
         var self = this
         var mqtt = require('mqtt')
         //var dbQuerys = require('./classes/dbQuerys.js')
         //************************ROUTS**********************//
-        var mqttAdress = 'mqtt://10.0.0.7';
+        var mqttAdress = 'mqtt://localhost';
         var sub = ['sol/in/#']
         //************************ROUTS**********************//
         console.log(self)

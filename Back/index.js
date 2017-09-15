@@ -28,6 +28,9 @@ app.all('*', function (req, res, next) {
     next();
 });
 
+app.post('/getCurrentResults', function (req, res) {
+    res.send(am.getCurrentResults());
+})
 
 app.post('/runAction', function (req, res) {
     var action = req.body
@@ -70,13 +73,29 @@ app.get('/getAllLog', function (req, res) {
 })
 
 //*************************DASHBOARD API****************************//
+
+
+
+
+app.post('/getServerLog', function (req, res) {
+    var from = req.body.from
+    var to = req.body.to
+    //create this action*****************************************************
+    mongo.getServerLog()
+    .then(function (result) {
+        
+        res.send(result);
+    })
+})
+
+
 app.post('/getlogdata', function (req, res) {
     var from = req.body.from
     var to = req.body.to
     //create this action*****************************************************
     mongo.getLogResults(from,to)
     .then(function (result) {
-        console.log("LOG DATAAAAAAAAAAAAAAAAAAAAAAA",result,from,to)
+        
         res.send(result);
     })
 })

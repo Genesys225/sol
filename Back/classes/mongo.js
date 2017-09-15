@@ -48,7 +48,6 @@ function addAction(newAction, callback) {
 
 function writeToLog(data) {
     var promise = new Promise(function (resolve, reject) {
-        console.log('WWWWWWWWWWWWWWWWWWWWWWWWW', data)
         MongoClient.connect(url, function (err, db) {
             var collection = db.collection("log");
             data.timestamp = (new Date).getTime() / 1000
@@ -102,6 +101,23 @@ function getLogResults(from, to) {
     return promise
 }
 
+function getServerLog() {
+    var promise = new Promise(function (resolve, reject) {
+        MongoClient.connect(url, function (err, db) {
+            var collection = db.collection("ascoltatori");
+            collection.find().sort({_id: -1}).limit(10).toArray(function (err, docs) {
+                // console.log(docs);
+                resolve(docs)
+                db.close();
+            });
+            // db.close(); 
+        });
+    })
+    return promise
+}
+
+
+
 
 function getAllLog() {
     var promise = new Promise(function (resolve, reject) {
@@ -123,11 +139,10 @@ function getAllLog() {
 function updateActionLastRun(action) {
     var promise = new Promise(function (resolve, reject) {
         MongoClient.connect(url, function (err, db) {
-            console.log(action, "ACTIONNNNNNNNN")
+            console.log("UPDATE ACTTION", action)
             var collection = db.collection("actions");
             action._id = new ObjectID(action._id)
             action.lastrun = (new Date).getTime() / 1000
-            console.log(action, new ObjectID(action._id), 11111111111111111111111111111111)
             collection.save(action).then(function (res) {
                 resolve(res)
             })
@@ -144,6 +159,7 @@ function updateActionLastRun(action) {
 
 var mongo = {}
 mongo.getLogResults =getLogResults
+mongo.getServerLog =getServerLog
 mongo.getAllLog = getAllLog
 mongo.getActions = getAllAction
 mongo.writeToLog = writeToLog
