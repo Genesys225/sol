@@ -27,9 +27,9 @@ angular.module('sol2App')
         var liveResults = response.data
         //parse
         for(var result in liveResults){
-          var timestamp = liveResults[result]._id.toString().substring(0,8)
-          var date = new Date( parseInt( timestamp, 16 ) * 1000 )
-          liveResults[result].timestamp = date
+        //  var timestamp = liveResults[result]._id.toString().substring(0,8)
+        //  var date = new Date( parseInt( timestamp, 16 ) * 1000 )
+        //  liveResults[result].timestamp = date
 
         }
         

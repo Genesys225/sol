@@ -85,57 +85,58 @@ class mqttManager {
 
 
 
-    createMqttServer(){
+    createMqttServer() {
 
         var mosca = require('mosca');
         var ascoltatore = {
-          //using ascoltatore
-        //  json:true,
-     //     return_buffers: true,
-          type: 'mongo',
-          url: 'mongodb://test:test12345@ds137281.mlab.com:37281/green324',
-          pubsubCollection: 'ascoltatori',
-          mongo: {}
+            //using ascoltatore
+            //  json:true,
+            //     return_buffers: true,
+            type: 'mongo',
+            url: 'mongodb://test:test12345@ds137281.mlab.com:37281/green324',
+            pubsubCollection: 'ascoltatori',
+            mongo: {}
         };
-        
+
         var settings = {
-          port: 1883,
-          backend: ascoltatore
+            port: 1883,
+            backend: ascoltatore
         };
-        
+
         var server = new mosca.Server(settings);
-        
-        server.on('clientConnected', function(client) {
+
+        server.on('clientConnected', function (client) {
             console.log('client connected', client.id);
         });
-        
-        // fired when a message is received
-        server.on('published', function(packet, client) {
-      
-      function b64DecodeUnicode(str) {
-        // Going backwards: from bytestream, to percent-encoding, to original string.
-        return decodeURIComponent(atob(str).split('').map(function(c) {
-            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-        }).join(''));
-    }
 
-   if(typeof(packet.payload) === 'object'){
-    //   console.log(packet)
-    var stringBuf = packet.payload.toString('utf-8');
-  //  var obj = JSON.parse(stringBuf);
-    console.log('STATUS MQTT ROW: ',packet.topic,":" ,stringBuf);
-   }else{
-    //console.log('Published', (packet.payload), typeof(packet.payload));
-   }
-    
-    
+        // fired when a message is received
+        server.on('published', function (packet, client) {
+
+            function b64DecodeUnicode(str) {
+                // Going backwards: from bytestream, to percent-encoding, to original string.
+                return decodeURIComponent(atob(str).split('').map(function (c) {
+                    return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+                }).join(''));
+            }
+
+            if (typeof (packet.payload) === 'object') {
+                console.log("IS PAYLOAD", packet)
+                var stringBuf = packet.payload.toString('utf-8');
+                //  var obj = JSON.parse(stringBuf);
+                console.log('STATUS MQTT ROW: ', packet.topic, ":", stringBuf);
+            } else {
+               // console.log("NOT PAYLOAD", packet)
+                //console.log('Published', (packet.payload), typeof(packet.payload));
+            }
+
+
         });
-        
+
         server.on('ready', setup);
-        
+
         // fired when the mqtt server is ready
         function setup() {
-          console.log('Mosca server is up and running');
+            console.log('Mosca server is up and running');
         }
     }
 

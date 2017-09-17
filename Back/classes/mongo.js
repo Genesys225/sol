@@ -106,6 +106,22 @@ function getServerLog() {
         MongoClient.connect(url, function (err, db) {
             var collection = db.collection("ascoltatori");
             collection.find().sort({_id: -1}).limit(10).toArray(function (err, docs) {
+
+                var dateFromObjectId = function (objectId) {
+                    
+                    var linuxTime = parseInt(objectId.substring(0, 8), 16)
+                  //  console.log(linuxTime,new Date(linuxTime*1000))
+                    return new Date(linuxTime * 1000);
+                };
+                    
+                for(var doc in docs) {
+                    var stringObjectID = ObjectID(docs[doc]._id).toString();
+                    var dateObject = dateFromObjectId(stringObjectID)
+                    docs[doc].timestamp = dateObject
+                //    console.log(dateObject)
+                }
+
+
                 // console.log(docs);
                 resolve(docs)
                 db.close();
